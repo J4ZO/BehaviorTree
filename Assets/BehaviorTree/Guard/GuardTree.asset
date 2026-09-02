@@ -33,7 +33,7 @@ MonoBehaviour:
   - rid: 1974214967092838479
   - rid: 1974214967092838480
   - rid: 1974214967092838527
-  m_VersionTimestamp: 639239403911080635
+  m_VersionTimestamp: 639239453762795093
   m_SerializedVersion: 3
   m_DebugInfo: {fileID: -2196586587476692106}
   m_RuntimeGraph: {fileID: 2275362386491290840}
@@ -86,6 +86,11 @@ MonoBehaviour:
           PublicKeyToken=b77a5c561934e089
       Tooltip: 
     - Name: Duration
+      Type:
+        m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    - Name: TextOffset
       Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
@@ -362,6 +367,7 @@ MonoBehaviour:
         - rid: 1974214967092838530
         - rid: 1974214967092838531
         - rid: 1974214967092838532
+        - rid: 1974214969972228111
     - rid: 1974214967092838528
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -458,6 +464,35 @@ MonoBehaviour:
         IsExposed: 1
         m_IsShared: 0
         m_Value: 
+    - rid: 1974214969972228111
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: TextOffset
+        Type:
+          m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 1974214969972228112
+        LinkedVariable:
+          rid: 1974214969972228135
+    - rid: 1974214969972228112
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 1974214969972228135
+      type: {class: 'TypedVariableModel`1[[System.Single, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 7859752608613928350
+          m_Value1: 15144967066925017022
+        Name: TextOffset
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
 --- !u!114 &2275362386491290840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,8 +525,8 @@ MonoBehaviour:
           rid: 1974214967092838470
         BlackboardGroupReferences: []
         Root:
-          rid: 1974214967092838567
-        m_VersionTimestamp: 639239403911080635
+          rid: 1974214969972228136
+        m_VersionTimestamp: 639239453762795093
     - rid: 1974214967092838470
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -502,26 +537,11 @@ MonoBehaviour:
       type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Variables:
-        - rid: 1974214967092838569
-        - rid: 1974214967092838570
-        - rid: 1974214967092838571
-    - rid: 1974214967092838510
-      type: {class: 'BlackboardVariable`1[[Unity.Behavior.ConditionOperator, Unity.Behavior]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 0
-    - rid: 1974214967092838523
-      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 1
-    - rid: 1974214967092838542
+        - rid: 1974214969972228138
+        - rid: 1974214969972228139
+        - rid: 1974214969972228140
+        - rid: 1974214969972228141
+    - rid: 1974214969972228122
       type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -529,7 +549,23 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 2
-    - rid: 1974214967092838567
+    - rid: 1974214969972228124
+      type: {class: 'BlackboardVariable`1[[Unity.Behavior.ConditionOperator, Unity.Behavior]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 1974214969972228125
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 1
+    - rid: 1974214969972228136
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -540,10 +576,10 @@ MonoBehaviour:
         m_Parent:
           rid: -2
         m_Child:
-          rid: 1974214967092838568
+          rid: 1974214969972228137
         Repeat: 1
         AllowMultipleRepeatsPerTick: 0
-    - rid: 1974214967092838568
+    - rid: 1974214969972228137
       type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -552,21 +588,21 @@ MonoBehaviour:
         Graph:
           rid: 1974214967092838469
         m_Parent:
-          rid: 1974214967092838567
+          rid: 1974214969972228136
         m_Children:
-        - rid: 1974214967092838572
+        - rid: 1974214969972228142
         m_RegisteredObservers: []
         m_Conditions:
-        - rid: 1974214967092838573
+        - rid: 1974214969972228143
         m_RequiresAllConditions: 0
         True:
-          rid: 1974214967092838572
+          rid: 1974214969972228142
         False:
           rid: -2
         m_CurrentChild:
           rid: -2
         m_ObserverType: 0
-    - rid: 1974214967092838569
+    - rid: 1974214969972228138
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -574,7 +610,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 0}
-    - rid: 1974214967092838570
+    - rid: 1974214969972228139
       type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -582,7 +618,7 @@ MonoBehaviour:
           m_Value1: 5490769139968125133
         Name: IsTalkingToThePlayer
         m_Value: 0
-    - rid: 1974214967092838571
+    - rid: 1974214969972228140
       type: {class: 'BlackboardVariable`1[[System.String, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -590,7 +626,15 @@ MonoBehaviour:
           m_Value1: 1397635162615169082
         Name: GuardText
         m_Value: 
-    - rid: 1974214967092838572
+    - rid: 1974214969972228141
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 7859752608613928350
+          m_Value1: 15144967066925017022
+        Name: TextOffset
+        m_Value: 0
+    - rid: 1974214969972228142
       type: {class: TalkAction, ns: Unity.Behavior.Example, asm: Assembly-CSharp}
       data:
         ID:
@@ -599,24 +643,26 @@ MonoBehaviour:
         Graph:
           rid: 1974214967092838469
         m_Parent:
-          rid: 1974214967092838568
+          rid: 1974214969972228137
         Agent:
-          rid: 1974214967092838569
+          rid: 1974214969972228138
         Sentence:
-          rid: 1974214967092838571
+          rid: 1974214969972228140
         Duration:
-          rid: 1974214967092838542
-    - rid: 1974214967092838573
+          rid: 1974214969972228122
+        TextOffset:
+          rid: 1974214969972228141
+    - rid: 1974214969972228143
       type: {class: VariableComparisonCondition, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         Graph:
           rid: 1974214967092838469
         Variable:
-          rid: 1974214967092838570
+          rid: 1974214969972228139
         Operator:
-          rid: 1974214967092838510
+          rid: 1974214969972228124
         ComparisonValue:
-          rid: 1974214967092838523
+          rid: 1974214969972228125
 --- !u!114 &7003739476573031143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,15 +675,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: GuardTree Blackboard
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.RuntimeBlackboardAsset
-  VersionTimestamp: 639239403889911565
+  VersionTimestamp: 639239453754173454
   AssetID:
-    m_Value0: 0
-    m_Value1: 0
+    m_Value0: 344661814279497498
+    m_Value1: 1121980826294469275
   m_Blackboard:
     m_Variables:
     - rid: 1974214967092838474
     - rid: 1974214967092838495
     - rid: 1974214967092838558
+    - rid: 1974214969972228126
   m_SharedBlackboardVariableGuids: []
   references:
     version: 2
@@ -666,6 +713,14 @@ MonoBehaviour:
           m_Value1: 1397635162615169082
         Name: GuardText
         m_Value: 
+    - rid: 1974214969972228126
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 7859752608613928350
+          m_Value1: 15144967066925017022
+        Name: TextOffset
+        m_Value: 0
 --- !u!114 &7936545163746376875
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -679,13 +734,14 @@ MonoBehaviour:
   m_Name: GuardTree Blackboard
   m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorBlackboardAuthoringAsset
   AssetID:
-    m_Value0: 0
-    m_Value1: 0
+    m_Value0: 344661814279497498
+    m_Value1: 1121980826294469275
   m_Variables:
   - rid: 1974214967092838475
   - rid: 1974214967092838490
   - rid: 1974214967092838550
-  m_VersionTimestamp: 639239403889911565
+  - rid: 1974214969972228113
+  m_VersionTimestamp: 639239453754173454
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: 7003739476573031143}
@@ -722,3 +778,13 @@ MonoBehaviour:
         IsExposed: 1
         m_IsShared: 0
         m_Value: 
+    - rid: 1974214969972228113
+      type: {class: 'TypedVariableModel`1[[System.Single, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 7859752608613928350
+          m_Value1: 15144967066925017022
+        Name: TextOffset
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0

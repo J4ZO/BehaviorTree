@@ -22,6 +22,8 @@ namespace Unity.Behavior.Example
 
         [Tooltip("The time in seconds for the text to show.")]
         [SerializeReference] public BlackboardVariable<float> Duration = new BlackboardVariable<float>(2.0f);
+        
+        [SerializeReference] public BlackboardVariable<float> TextOffset;
 
         private float m_WaitTimer;
         private Animator m_Animator;
@@ -109,7 +111,7 @@ namespace Unity.Behavior.Example
 
         private Vector3 GetBoundsOffset(Bounds bounds)
         {
-            return new Vector3(0.0f, bounds.max.y + 2f);
+            return new Vector3(0.0f, bounds.max.y + TextOffset.Value);
         }
 
         private Quaternion GetTextLookRotation()
